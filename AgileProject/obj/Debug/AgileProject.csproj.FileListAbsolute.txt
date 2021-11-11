@@ -1,0 +1,17 @@
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\bin\Debug\AgileProject.exe.config
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\bin\Debug\AgileProject.exe
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\bin\Debug\AgileProject.pdb
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\AgileProject.csproj.AssemblyReference.cache
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\LogIn.g.cs
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\Window1.g.cs
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\App.g.cs
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\AgileProject_MarkupCompile.cache
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\AgileProject_MarkupCompile.lref
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\LogIn.baml
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\Window1.baml
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\AgileProject.g.resources
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\AgileProject.Properties.Resources.resources
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\AgileProject.csproj.GenerateResource.cache
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\AgileProject.csproj.CoreCompileInputs.cache
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\AgileProject.exe
+C:\Users\tapooll\source\repos\AgileProject\AgileProject\obj\Debug\AgileProject.pdb
