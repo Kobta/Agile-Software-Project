@@ -5,18 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="720" Width="1280">
     <Grid>
-        <Frame x:Name="Main"/>
-        <ComboBox x:Name="Category" HorizontalAlignment="Center" Margin="336,113,336,0" VerticalAlignment="Top" Width="120" Height="31" SelectionChanged="Category_SelectionChanged" BorderBrush="Blue" Foreground="#FF0707FF" Background="#FF0023FF">
-            <ComboBoxItem Content="Meat" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Chicken" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Vege" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Fish" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Ground meat" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Vegetables" HorizontalAlignment="Left" Width="118"/>
-        </ComboBox>
-        <Button Content="Storage" HorizontalAlignment="Center" Margin="0,201,0,0" VerticalAlignment="Top" Width="120" Height="31" Background="#FF2749E2"  Foreground="White"/>
-        <Button Content="Planned Meals" HorizontalAlignment="Center" Margin="0,273,0,0" VerticalAlignment="Top" Width="120" Height="31" Background="#FF2749E2"  Foreground="White"/>
+        <Frame x:Name="Main" Margin="10" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Window>

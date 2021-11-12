@@ -1,4 +1,4 @@
-﻿<Page x:Class="Project.Page1"
+﻿<Page x:Class="Project.AddRecipe"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,9 +6,10 @@
       xmlns:local="clr-namespace:Project"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1">
+      Title="AddRecipe">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="307,210,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Label Content="Olli lissää : 3&#xD;&#xA;" HorizontalAlignment="Left" Margin="154,148,0,0" VerticalAlignment="Top" Height="175" Width="424" FontSize="28"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="81" Height="26" Click="Button_Click_1" Background="#FF2749E2" Foreground="White"/>
     </Grid>
 </Page>

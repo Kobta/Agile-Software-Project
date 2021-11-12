@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\tapooll\source\repos\Kobta\Agile-Software-Project\Project\obj\Debug\
+C:\Users\tapooll\Source\Repos\Kobta\Agile-Software-Project\Project\obj\Debug\
 Project
 none
 false
 DEBUG;TRACE
-C:\Users\tapooll\source\repos\Kobta\Agile-Software-Project\Project\App.xaml
-2400784391
+C:\Users\tapooll\Source\Repos\Kobta\Agile-Software-Project\Project\App.xaml
+61390503940
 
-81595057530
+111846476203
 13-1505183044
-MainWindow.xaml;Page1.xaml;
+AddRecipe.xaml;Home.xaml;MainWindow.xaml;PlannedMeals.xaml;Recipe.xaml;Storage.xaml;
 
 True
 

@@ -16,19 +16,28 @@ using System.Windows.Shapes;
 namespace Project
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Recipe.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Recipe : Page
     {
-
-        //List<string> db;
-        public MainWindow()
+        public Recipe()
         {
             InitializeComponent();
-
-
-           Main.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
+        }
     }
 }
