@@ -16,13 +16,26 @@ using System.Windows.Shapes;
 namespace Project
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for PlannedMeals.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class PlannedMeals : Page
     {
-        public Page1()
+        public PlannedMeals()
         {
             InitializeComponent();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
+        }
+
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // sql
+        }
+
+
     }
 }

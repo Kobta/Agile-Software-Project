@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\tapooll\Source\Repos\Kobta\Agile-Software-Project\Project\App.xaml
-2400784391
+61390503940
 
-7-1857550399
+10-1606131726
 13-1505183044
-MainWindow.xaml;Page1.xaml;
+AddRecipe.xaml;Home.xaml;MainWindow.xaml;PlannedMeals.xaml;Recipe.xaml;Storage.xaml;
 
-True
+False
 
