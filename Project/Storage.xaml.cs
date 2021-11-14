@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace Project
 {
@@ -23,6 +26,7 @@ namespace Project
         public Storage()
         {
             InitializeComponent();
+            FillDataGrid();
         }
 
 
@@ -40,9 +44,21 @@ namespace Project
             }
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void FillDataGrid()
         {
-            // sql
+            MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;database=applicationproject;sslmode=None");
+            connection.Open();
+
+            string Query = "select name, category, baseUnit from foodstuff";
+            MySqlCommand command = new MySqlCommand(Query, connection);
+            command.ExecuteNonQuery();
+
+            MySqlDataAdapter dataAdp = new MySqlDataAdapter(command);
+            DataTable dt = new DataTable("foodstuff");
+            dataAdp.Fill(dt);
+            dgrid.ItemsSource = dt.DefaultView;
+            dataAdp.Update(dt);
         }
+
     }
 }
