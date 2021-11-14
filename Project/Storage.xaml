@@ -8,13 +8,7 @@
       Title="Storage">
 
     <Grid>
-        <DataGrid HorizontalAlignment="Center" Height="288" Margin="65,156,65,6" VerticalAlignment="Center" Width="660" RenderTransformOrigin="0.5,0.5" SelectionChanged="DataGrid_SelectionChanged">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" />
-                <DataGridTextColumn Header="Amount" />
-                <DataGridTextColumn Header="Date of purchase" />
-                <DataGridTextColumn Header="Price" />
-            </DataGrid.Columns>
+        <DataGrid Name="dgrid" HorizontalAlignment="Center" Height="288" Margin="65,156,65,6" VerticalAlignment="Center" Width="660" RenderTransformOrigin="0.5,0.5" >
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
