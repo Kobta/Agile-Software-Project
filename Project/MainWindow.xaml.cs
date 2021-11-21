@@ -21,13 +21,13 @@ namespace Project
     public partial class MainWindow : Window
     {
 
-        //List<string> db;
         public MainWindow()
         {
             InitializeComponent();
 
 
-           Main.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
+
+            Main.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
         }
 
     }

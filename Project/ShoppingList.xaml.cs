@@ -18,11 +18,11 @@ using System.Windows.Shapes;
 namespace Project
 {
     /// <summary>
-    /// Interaction logic for PlannedMeals.xaml
+    /// Interaction logic for ShoppingList.xaml
     /// </summary>
-    public partial class PlannedMeals : Page
+    public partial class ShoppingList : Page
     {
-        public PlannedMeals()
+        public ShoppingList()
         {
             InitializeComponent();
             FillDataGrid();
@@ -38,17 +38,15 @@ namespace Project
         {
             MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;database=applicationproject;sslmode=None");
             connection.Open();
-            string Query = "select name, productionDate from meal";
+            string Query = "select items, executionDate from shoppinglist";
             MySqlCommand command = new MySqlCommand(Query, connection);
             command.ExecuteNonQuery();
 
             MySqlDataAdapter dataAdp = new MySqlDataAdapter(command);
-            DataTable dt = new DataTable("meal");
+            DataTable dt = new DataTable("shoppinglist");
             dataAdp.Fill(dt);
             dgrid.ItemsSource = dt.DefaultView;
             dataAdp.Update(dt);
         }
-
-
     }
 }
