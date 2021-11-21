@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="Recipe">
 
     <Grid>
@@ -24,7 +24,7 @@
                 </DataGrid.RenderTransform>
             </DataGrid>
             <Button Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="81" Height="26" Click="Button_Click_1" Background="#FF2749E2" Foreground="White"/>
-            <TextBox HorizontalAlignment="Center" Height="23" Margin="66,126,67,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="667" TextChanged="TextBox_TextChanged"/>
+            <TextBox HorizontalAlignment="Center" Height="23" Margin="476,257,476,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="328" TextChanged="TextBox_TextChanged"/>
         </Grid>
     </Grid>
 </Page>

@@ -50,5 +50,10 @@ namespace Project
         {
             this.NavigationService.Navigate(new Uri("AddRecipe.xaml", UriKind.Relative));
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("ShoppingList.xaml", UriKind.Relative));
+        }
     }
 }

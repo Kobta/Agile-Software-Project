@@ -63,8 +63,12 @@
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IngredientsListItem.cs" />
     <Compile Include="Recipe.xaml.cs">
       <DependentUpon>Recipe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingList.xaml.cs">
+      <DependentUpon>ShoppingList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Storage.xaml.cs">
       <DependentUpon>Storage.xaml</DependentUpon>
@@ -94,6 +98,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Recipe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShoppingList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
