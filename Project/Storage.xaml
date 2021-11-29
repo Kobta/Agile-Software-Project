@@ -8,7 +8,7 @@
       Title="Storage">
 
     <Grid>
-        <DataGrid Name="dgrid" HorizontalAlignment="Center" Height="288" Margin="65,156,65,6" VerticalAlignment="Center" Width="660" RenderTransformOrigin="0.5,0.5" >
+        <DataGrid Name="dgrid" HorizontalAlignment="Center" Height="359" Margin="310,291,310,70" VerticalAlignment="Center" Width="660" RenderTransformOrigin="0.5,0.5" >
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -19,6 +19,7 @@
             </DataGrid.RenderTransform>
         </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="81" Height="26" Click="Button_Click_1" Background="#FF2749E2" Foreground="White"/>
-        <TextBox HorizontalAlignment="Center" Height="23" Margin="310,262,310,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="660" TextChanged="TextBox_TextChanged"/>
+        <TextBox Name="textb1" HorizontalAlignment="Center" Height="23" Margin="310,262,310,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="660" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Food Storage" HorizontalAlignment="Center" Margin="0,109,0,0" VerticalAlignment="Top" Width="193" FontSize="30"/>
     </Grid>
 </Page>

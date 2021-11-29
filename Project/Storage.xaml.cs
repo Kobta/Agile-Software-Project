@@ -35,14 +35,6 @@ namespace Project
             this.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
         }
 
-        private void TextBox_TextChanged(Object sender, TextChangedEventArgs e)
-        {
-            var tb = sender as TextBox;
-            if(tb.Text != "")
-            {
-               // lisää sql setit
-            }
-        }
 
         private void FillDataGrid()
         {
@@ -58,6 +50,32 @@ namespace Project
             dataAdp.Fill(dt);
             dgrid.ItemsSource = dt.DefaultView;
             dataAdp.Update(dt);
+        }
+
+        private void TextBox_TextChanged(Object sender, TextChangedEventArgs e)
+        {
+             MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;database=applicationproject;sslmode=None");
+             connection.Open();
+
+             var tb = sender as TextBox;
+             if(textb1.Text.Trim().Length > 0)
+             {
+                 string Query = "SELECT name, category, baseUnit FROM foodstuff WHERE name like '%" + textb1.Text + "%'";
+                 MySqlCommand command = new MySqlCommand(Query, connection);
+                 command.ExecuteNonQuery();
+
+
+
+                 MySqlDataAdapter dataAdp = new MySqlDataAdapter(command);
+                 DataTable dt = new DataTable("foodstuff");
+                 dataAdp.Fill(dt);
+                 dgrid.ItemsSource = dt.DefaultView;
+                 dataAdp.Update(dt);
+            }
+            else
+            {
+                FillDataGrid();
+            }
         }
 
     }

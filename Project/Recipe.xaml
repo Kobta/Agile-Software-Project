@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid>
-            <DataGrid HorizontalAlignment="Center" Height="288" Margin="65,156,65,6" VerticalAlignment="Center" Width="330" RenderTransformOrigin="0.5,0.5" SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid Name="recipe" HorizontalAlignment="Center" Height="377" Margin="172,249,664,94" VerticalAlignment="Center" Width="444" RenderTransformOrigin="0.5,0.5" SelectionChanged="DataGrid_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Recipe" />
                 </DataGrid.Columns>
@@ -24,7 +24,9 @@
                 </DataGrid.RenderTransform>
             </DataGrid>
             <Button Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="81" Height="26" Click="Button_Click_1" Background="#FF2749E2" Foreground="White"/>
-            <TextBox HorizontalAlignment="Center" Height="23" Margin="476,257,476,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="328" TextChanged="TextBox_TextChanged"/>
+            <TextBox HorizontalAlignment="Center" Height="23" Margin="172,168,662,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="446" TextChanged="TextBox_TextChanged"/>
+            <TextBox HorizontalAlignment="Center" Height="377" Margin="658,249,178,94" VerticalAlignment="Center" Width="444" TextWrapping="Wrap" TextChanged="TextBox_TextChanged_1"/>
+            <Button Content="Add selected recipe to planned meals" HorizontalAlignment="Left" Margin="871,166,0,0" VerticalAlignment="Top" Width="231" Height="26" Click="Button_Click_2" Background="#FF2749E2" Foreground="White"/>
         </Grid>
     </Grid>
 </Page>

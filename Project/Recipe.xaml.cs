@@ -27,17 +27,29 @@ namespace Project
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //hae reseptejä
 
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            //valitse resepti jonka tiedot haluat nähdä textboxissa.
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            //back
             this.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            //tää siirtää valitun reseptin mealsiin.
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            //textbox joka näyttää datagridista valitun reseptin sisällön.
         }
     }
 }

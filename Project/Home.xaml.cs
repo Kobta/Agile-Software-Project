@@ -38,21 +38,25 @@ namespace Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //storage
            this.NavigationService.Navigate(new Uri("Storage.xaml", UriKind.Relative));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            //planned meals
             this.NavigationService.Navigate(new Uri("PlannedMeals.xaml", UriKind.Relative));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            //addrecipe
             this.NavigationService.Navigate(new Uri("AddRecipe.xaml", UriKind.Relative));
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            //shoppinglist
             this.NavigationService.Navigate(new Uri("ShoppingList.xaml", UriKind.Relative));
         }
     }
