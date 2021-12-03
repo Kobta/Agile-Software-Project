@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Project
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
 
@@ -27,7 +24,7 @@ namespace Project
 
 
 
-            Main.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
+            Main.NavigationService.Navigate(new Uri("UI/Home.xaml", UriKind.Relative));
         }
 
     }

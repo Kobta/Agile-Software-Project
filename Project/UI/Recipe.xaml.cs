@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Project
 {
-    /// <summary>
-    /// Interaction logic for Recipe.xaml
-    /// </summary>
     public partial class Recipe : Page
     {
         public Recipe()
@@ -39,7 +36,7 @@ namespace Project
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             //back
-            this.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("UI/Home.xaml", UriKind.Relative));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Project
 {
-    /// <summary>
-    /// Interaction logic for AddRecipe.xaml
-    /// </summary>
     public partial class AddRecipe : Page
     {
         public ObservableCollection<IngredientsListItem> GridIngredients { get; set; }
@@ -37,7 +34,7 @@ namespace Project
         //back
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Home.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("UI/Home.xaml", UriKind.Relative));
         }
 
         private void Ingredients_SelectionChanged(object sender, SelectionChangedEventArgs e)
