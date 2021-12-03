@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Project
 {
-    /// <summary>
-    /// Interaction logic for Home.xaml
-    /// </summary>
     public partial class Home : Page
     {
         public Home()
@@ -27,7 +24,7 @@ namespace Project
 
         private void Category_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Recipe.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("UI/Recipe.xaml", UriKind.Relative));
         }
 
         private void Category_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -39,25 +36,25 @@ namespace Project
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //storage
-           this.NavigationService.Navigate(new Uri("Storage.xaml", UriKind.Relative));
+           this.NavigationService.Navigate(new Uri("UI/Storage.xaml", UriKind.Relative));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             //planned meals
-            this.NavigationService.Navigate(new Uri("PlannedMeals.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("UI/PlannedMeals.xaml", UriKind.Relative));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             //addrecipe
-            this.NavigationService.Navigate(new Uri("AddRecipe.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("UI/AddRecipe.xaml", UriKind.Relative));
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             //shoppinglist
-            this.NavigationService.Navigate(new Uri("ShoppingList.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("UI/ShoppingList.xaml", UriKind.Relative));
         }
     }
 }

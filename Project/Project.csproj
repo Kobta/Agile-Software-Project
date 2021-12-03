@@ -57,63 +57,68 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddRecipe.xaml.cs">
+    <Compile Include="B-layer\MealsB.cs" />
+    <Compile Include="B-layer\StorageB.cs" />
+    <Compile Include="D-layer\StorageD.cs" />
+    <Compile Include="D-layer\IngredientsListItem.cs" />
+    <Compile Include="D-layer\MealsD.cs" />
+    <Compile Include="D-layer\SListD.cs" />
+    <Compile Include="B-layer\SListB.cs" />
+    <Compile Include="UI\AddRecipe.xaml.cs">
       <DependentUpon>AddRecipe.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Home.xaml.cs">
+    <Compile Include="UI\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IngredientsListItem.cs" />
-    <Compile Include="Recipe.xaml.cs">
+    <Compile Include="UI\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PlannedMeals.xaml.cs">
+      <DependentUpon>PlannedMeals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Recipe.xaml.cs">
       <DependentUpon>Recipe.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingList.xaml.cs">
+    <Compile Include="UI\ShoppingList.xaml.cs">
       <DependentUpon>ShoppingList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Storage.xaml.cs">
+    <Compile Include="UI\Storage.xaml.cs">
       <DependentUpon>Storage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddRecipe.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Home.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="PlannedMeals.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="UI\AddRecipe.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="Recipe.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="UI\Home.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="ShoppingList.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="UI\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="Storage.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="UI\PlannedMeals.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Recipe.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ShoppingList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Storage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlannedMeals.xaml.cs">
-      <DependentUpon>PlannedMeals.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
