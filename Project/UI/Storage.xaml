@@ -8,7 +8,7 @@
       Title="Storage">
 
     <Grid>
-        <DataGrid Name="dgrid" HorizontalAlignment="Center" Height="359" Margin="310,291,310,70" VerticalAlignment="Center" Width="660" RenderTransformOrigin="0.5,0.5" >
+        <DataGrid Name="dgrid" ColumnWidth="*" HorizontalAlignment="Center" Height="359" Margin="310,291,310,70" VerticalAlignment="Center" Width="660" RenderTransformOrigin="0.5,0.5" >
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

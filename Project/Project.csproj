@@ -57,13 +57,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="B-layer\AddRecipeB.cs" />
     <Compile Include="B-layer\MealsB.cs" />
     <Compile Include="B-layer\StorageB.cs" />
+    <Compile Include="D-layer\AddRecipeD.cs" />
+    <Compile Include="D-layer\ShoppingListD.cs" />
     <Compile Include="D-layer\StorageD.cs" />
     <Compile Include="D-layer\IngredientsListItem.cs" />
     <Compile Include="D-layer\MealsD.cs" />
     <Compile Include="D-layer\SListD.cs" />
     <Compile Include="B-layer\SListB.cs" />
+    <Compile Include="D-layer\RecipeD.cs" />
+    <Compile Include="B-layer\RecipeListB.cs" />
     <Compile Include="UI\AddRecipe.xaml.cs">
       <DependentUpon>AddRecipe.xaml</DependentUpon>
     </Compile>

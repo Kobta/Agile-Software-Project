@@ -12,7 +12,7 @@ namespace Project
     public class IngredientsListItem
     {
         public string Ingredient { get; set; }
-        public double Amount { get; set; }
+        public int Amount { get; set; }
         public string UnitName { get; set; }
 
 

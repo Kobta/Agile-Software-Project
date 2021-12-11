@@ -37,22 +37,37 @@ namespace Project
             this.NavigationService.Navigate(new Uri("UI/Home.xaml", UriKind.Relative));
         }
 
-        private void Ingredients_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
         //lisää tiedot tietokantaan
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            //ota kaikkien textboxien ja datagridin inputit ja lisää ne tietokantaan
+            //ota kaikkien textboxien inputit
+            string name = this.rname.Text.ToString();
+            string ctg = this.rcategory.Text.ToString();
+            int aop = Convert.ToInt32(this.portions.Text);
+            string inst = this.Inst.Text.ToString();
+
+            //luodaan objekti
+            AddRecipeB ad = new AddRecipeB();
+
+            //lähetetään textbox eteenpäin
+            int result = ad.AddRecipes(name, ctg, aop, inst);
+
+            //datagrid
+            int result2 = ad.AddRecipes(GridIngredients);
+
+            //testataan onnistuiko
+            if (result > 0 && result2 > 0)
+            {
+                MessageBox.Show("Recipe Added");
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong.");
+            }
+
 
         }
-
-        private void Ingredients_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
     }
 
     
