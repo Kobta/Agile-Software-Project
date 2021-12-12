@@ -22,16 +22,11 @@ namespace Project
             InitializeComponent();
         }
 
-        private void Category_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //Browse recipes
+        private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("UI/Recipe.xaml", UriKind.Relative));
         }
-
-        private void Category_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            //testailen jossain vaiheessa, jos saan ennakoivan tekstin toimimaan
-        }
-
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

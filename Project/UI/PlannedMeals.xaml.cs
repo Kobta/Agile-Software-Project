@@ -31,6 +31,7 @@ namespace Project
             this.NavigationService.Navigate(new Uri("UI/Home.xaml", UriKind.Relative));
         }
 
+        //fill
         private void FillDataGrid()
         {
             try
@@ -40,7 +41,7 @@ namespace Project
             }
             catch
             {
-                MessageBox.Show("I'm a Datagnome, pls be patient");
+                MessageBox.Show("Something went wrong");
             }
         }
 

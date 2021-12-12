@@ -17,13 +17,10 @@ namespace Project
 {
     public partial class MainWindow : Window
     {
-
+        //Same window, different pages
         public MainWindow()
         {
             InitializeComponent();
-
-
-
             Main.NavigationService.Navigate(new Uri("UI/Home.xaml", UriKind.Relative));
         }
 

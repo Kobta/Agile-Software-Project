@@ -9,6 +9,7 @@ namespace Project
 {
    public class StorageB
     {
+        //get everything in foodstuff
         public DataTable GetStorage()
         {
             try
@@ -21,7 +22,7 @@ namespace Project
                 throw;
             }
         }
-
+        //search
         public DataTable GetStorage(string name)
         {
             try

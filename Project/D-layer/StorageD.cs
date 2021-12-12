@@ -10,18 +10,19 @@ namespace Project
 {
     public class StorageD
     {
-       
-        public string ConSt = "server=localhost;user id=root;database=applicationproject;sslmode=None";
+       //connection
+        public string ConSt = "server=localhost;user id=root;database=agileproject;sslmode=None";
         MySqlConnection connection = new MySqlConnection();
        
         DataTable dt = new DataTable();
 
+        //get everything inside foodstuff
         public DataTable Read()
         {
             connection.ConnectionString = ConSt;
             if (ConnectionState.Closed == connection.State)
                 connection.Open();
-            MySqlCommand cmd = new MySqlCommand("select name, category, baseUnit from foodstuff", connection);
+            MySqlCommand cmd = new MySqlCommand("select name, baseUnit from foodstuff", connection);
             try
             {
                 MySqlDataReader rd = cmd.ExecuteReader();
@@ -34,6 +35,7 @@ namespace Project
             }
          
         }
+        //search
         public DataTable Read(String nm)
         {
             connection.ConnectionString = ConSt;

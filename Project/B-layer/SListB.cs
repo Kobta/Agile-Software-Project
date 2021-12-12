@@ -9,6 +9,8 @@ namespace Project
 {
    public class SListB
     {
+
+        //get shoppinglist
         public DataTable GetSList()
         {
             try
