@@ -10,11 +10,13 @@ namespace Project
 {
     public class SListD
     {
-        public string ConSt = "server=localhost;user id=root;database=applicationproject;sslmode=None";
+        //connection
+        public string ConSt = "server=localhost;user id=root;database=agileproject;sslmode=None";
         MySqlConnection connection = new MySqlConnection();
 
         DataTable dt = new DataTable();
 
+        //get everything inside shoppinglist
         public DataTable Read()
         {
             connection.ConnectionString = ConSt;

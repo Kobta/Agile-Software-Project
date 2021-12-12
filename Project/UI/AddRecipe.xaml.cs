@@ -23,8 +23,7 @@ namespace Project
         {
             InitializeComponent();
 
-            //Nämä luovat muokattavan datagridin sisällön
-            //kaikki datagridin inputit menee yhteen collectioniin josta voi sitten poimia mitä haluaa tietokantaan
+            //this containes all ingredients
             GridIngredients = new ObservableCollection<IngredientsListItem>();
             DataContext = this;
 
@@ -38,25 +37,25 @@ namespace Project
         }
 
 
-        //lisää tiedot tietokantaan
+        //Add recipe to database
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            //ota kaikkien textboxien inputit
+            //get textbox inputs
             string name = this.rname.Text.ToString();
             string ctg = this.rcategory.Text.ToString();
             int aop = Convert.ToInt32(this.portions.Text);
             string inst = this.Inst.Text.ToString();
 
-            //luodaan objekti
+            //create object
             AddRecipeB ad = new AddRecipeB();
 
-            //lähetetään textbox eteenpäin
+            //send textboxes forward and get result
             int result = ad.AddRecipes(name, ctg, aop, inst);
 
-            //datagrid
+            //send datagrid ingredients forward and get result
             int result2 = ad.AddRecipes(GridIngredients);
 
-            //testataan onnistuiko
+            //test if succesful
             if (result > 0 && result2 > 0)
             {
                 MessageBox.Show("Recipe Added");

@@ -26,13 +26,13 @@ namespace Project
             FillDataGrid();
         }
 
-
+        //back
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("UI/Home.xaml", UriKind.Relative));
         }
 
-
+        //fill
         private void FillDataGrid()
         {
             try
@@ -42,10 +42,11 @@ namespace Project
             }
             catch
             {
-                MessageBox.Show("I'm a Datagnome, pls be patient");
+                MessageBox.Show("Something went wrong");
             }
         }
 
+        //search
         private void TextBox_TextChanged(Object sender, TextChangedEventArgs e)
         { 
              if(textb1.Text.Trim().Length > 0)
@@ -57,7 +58,7 @@ namespace Project
                 }
                 catch
                 {
-                    MessageBox.Show("I'm a Datagnome, pls be patient");
+                    MessageBox.Show("Something went wrong");
                 }
              }
             else

@@ -9,6 +9,7 @@ namespace Project
 {
     public class MealsB
     {
+        //get planned meals
         public DataTable GetMeal()
         {
             try

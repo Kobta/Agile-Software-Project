@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    //tänne varmaa shoppinglist toiminnallisuus
-    //eli planned meals initiatee tän jos ei oo tarpeeks kamaa reseptiin
+    //shopping list adding functionality?
+    //if not needed, it will be deleted : )
     public class ShoppingListD
     {
     }

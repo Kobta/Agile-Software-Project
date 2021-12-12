@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Project
 {
+    //this containes every ingredient that user gives
     public class IngredientsListItem
     {
         public string Ingredient { get; set; }
@@ -16,7 +17,7 @@ namespace Project
         public string UnitName { get; set; }
 
 
-
+        //these are test ingredients
         public IngredientsListItem()
         {
             Ingredient = "carrot";

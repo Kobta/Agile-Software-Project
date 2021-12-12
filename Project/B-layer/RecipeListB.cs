@@ -9,6 +9,8 @@ namespace Project
 {
    public class RecipeListB
     {
+
+        //get list of recipes
         public DataTable GetRecipeList()
         {
             try
@@ -21,6 +23,7 @@ namespace Project
                 throw;
             }
         }
+        //get search result
         public DataTable GetRecipeList(string name)
         {
             try
@@ -34,12 +37,40 @@ namespace Project
             }
         }
 
-        public string GetRecipeLists(int value)
+        public DataTable ShowIngredients(int id)
         {
             try
             {
                 RecipeD objS = new RecipeD();
-                return objS.Read(value);
+                return objS.ShowIngredients(id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //show instructions
+        public string ShowInstructions(string value)
+        {
+            try
+            {
+                RecipeD objS = new RecipeD();
+                return objS.Show(value);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //add recipe to meal
+        public int AddToMeal(string value, string ddt)
+        {
+            try
+            {
+                RecipeD objS = new RecipeD();
+                return objS.Add(value, ddt);
             }
             catch
             {

@@ -10,7 +10,7 @@ namespace Project
 {
     public class AddRecipeB
     {
-        //textboxien sisältö
+        //textboxes
         public int AddRecipes(string name, string ctg, int aop, string inst)
         {
             try

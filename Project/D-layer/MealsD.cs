@@ -10,11 +10,13 @@ namespace Project
 {
     public class MealsD
     {
-        public string ConSt = "server=localhost;user id=root;database=applicationproject;sslmode=None";
+        //connection
+        public string ConSt = "server=localhost;user id=root;database=agileproject;sslmode=None";
         MySqlConnection connection = new MySqlConnection();
 
         DataTable dt = new DataTable();
 
+        //get everything inside planned meals
         public DataTable Read()
         {
             connection.ConnectionString = ConSt;

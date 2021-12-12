@@ -10,17 +10,10 @@
 
     <Grid>
         <Frame x:Name="F" Margin="10"/>
-        <ComboBox x:Name="Category" IsEditable="true" HorizontalAlignment="Center" Margin="336,113,336,0" VerticalAlignment="Top" Width="220" Height="31" SelectionChanged="Category_SelectionChanged" PreviewTextInput="Category_PreviewTextInput" BorderBrush="Blue" Foreground="#FF0707FF" Background="#FF0023FF">
-            <ComboBoxItem Content="Meat" HorizontalAlignment="Center" Width="220"/>
-            <ComboBoxItem Content="Chicken" HorizontalAlignment="Center" Width="220"/>
-            <ComboBoxItem Content="Vege" HorizontalAlignment="Center" Width="220"/>
-            <ComboBoxItem Content="Fish" HorizontalAlignment="Center" Width="220"/>
-            <ComboBoxItem Content="Ground meat" HorizontalAlignment="Center" Width="220"/>
-            <ComboBoxItem Content="Vegetables" HorizontalAlignment="Center" Width="220"/>
-        </ComboBox>
+        <Button Content="Browse recipes" HorizontalAlignment="Center" Margin="530,90,530,0" VerticalAlignment="Top" Width="220" Height="61" Background="#FF2749E2"  Foreground="White" Click="Button_Click_4"/>
         <Button Content="Storage" HorizontalAlignment="Center" Margin="290,245,290,0" VerticalAlignment="Top" Width="220" Height="61" Background="#FF2749E2"  Foreground="White" Click="Button_Click"/>
         <Button Content="Planned Meals" HorizontalAlignment="Center" Margin="290,323,290,0" VerticalAlignment="Top" Width="220" Height="61" Background="#FF2749E2"  Foreground="White" Click="Button_Click_1"/>
-        <Label Content="Recipe Categories" HorizontalAlignment="Center" Margin="315,70,317,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Recipe App" HorizontalAlignment="Center" Margin="555,43,557,0" VerticalAlignment="Top" FontSize="20"/>
         <Button Content="Add Recipe" HorizontalAlignment="Center" Margin="290,167,290,0" VerticalAlignment="Top" Width="220" Height="61" Background="#FF2749E2"  Foreground="White" Click="Button_Click_2"/>
         <Button Content="Shopping List" HorizontalAlignment="Center" Margin="530,404,530,0" VerticalAlignment="Top" Width="220" Height="61" Background="#FF2749E2"  Foreground="White" Click="Button_Click_3"/>
 
