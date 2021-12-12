@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid>
-            <DataGrid Name="recipe"  ColumnWidth="*" HorizontalAlignment="Center" Height="377" Margin="172,249,664,94" VerticalAlignment="Center" Width="444" RenderTransformOrigin="0.5,0.5" SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid Name="recipe" SelectedItem="{Binding RecipeNames}" ColumnWidth="*" HorizontalAlignment="Center" Height="377" Margin="172,249,664,94" VerticalAlignment="Center" Width="444" RenderTransformOrigin="0.5,0.5" SelectionChanged="DataGrid_SelectionChanged">
                 <DataGrid.Columns>
                     
                 </DataGrid.Columns>

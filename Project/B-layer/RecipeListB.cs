@@ -34,7 +34,7 @@ namespace Project
             }
         }
 
-        public DataTable GetRecipeLists(string value)
+        public string GetRecipeLists(int value)
         {
             try
             {
