@@ -51,7 +51,7 @@ namespace Project
             }
         }
 
-        public DataTable Read(int id)
+        public string Read(int id)
         {
             connection.ConnectionString = ConSt;
             if (ConnectionState.Closed == connection.State)
@@ -60,8 +60,12 @@ namespace Project
             try
             {
                 MySqlDataReader rd = cmd.ExecuteReader();
-                dt.Load(rd);
-                return dt;
+                string result="";
+                while (rd.Read())
+                {
+                   result = rd.GetString(0);
+                }
+                return result;
             }
             catch
             {

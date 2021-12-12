@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,23 +66,30 @@ namespace Project
 
         }
 
+        public List<string> RecipeNames = new List<string>();
+
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //avaa reseptin tarkemmat tiedot textboxisssa ( ei toimim vieläm)
             try
             {
-                string value = recipe.SelectedItem.ToString();
+                //get the row value for the sql query
+                DataGrid recipe = sender as DataGrid;
+                DataGridRow row = (DataGridRow)recipe.ItemContainerGenerator.ContainerFromIndex(recipe.SelectedIndex);
+                DataGridCell RowColumn = recipe.Columns[3].GetCellContent(row).Parent as DataGridCell;
+                int CellValue = Convert.ToInt32(((TextBlock)RowColumn.Content).Text);
 
                 RecipeListB i = new RecipeListB();
-                //this.textR.Text = i.GetRecipeLists(value);
+                this.textR.Text = i.GetRecipeLists(CellValue);
             }
             catch
             {
                 MessageBox.Show("I'm a Datagnome, pls be patient");
             }
-        }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+            
+        }
+            private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             //tää siirtää valitun reseptin mealsiin.
             //datagrid selection objektina ja siitä tiedot tietokantaan tai
