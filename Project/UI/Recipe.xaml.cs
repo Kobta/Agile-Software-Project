@@ -20,6 +20,7 @@ namespace Project
     {
         //This string saves the chosen recipe name
         public string CellValue;
+        public int CellID;
 
         public Recipe()
         {
@@ -82,7 +83,7 @@ namespace Project
                 CellValue = Convert.ToString(((TextBlock)RowColumn.Content).Text);
 
                 DataGridCell RowColumn1 = recipe.Columns[3].GetCellContent(row).Parent as DataGridCell;
-               int CellID = Convert.ToInt32(((TextBlock)RowColumn1.Content).Text);
+                CellID = Convert.ToInt32(((TextBlock)RowColumn1.Content).Text);
 
                 //create object and get result
                 RecipeListB i = new RecipeListB();
@@ -112,7 +113,7 @@ namespace Project
 
                 //create object and get result
                 RecipeListB i = new RecipeListB();
-                result = i.AddToMeal(CellValue, ddt);
+                result = i.AddToMeal(CellValue, ddt, CellID);
 
                 if (result > 0)
                 {

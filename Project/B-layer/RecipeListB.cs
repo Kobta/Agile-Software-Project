@@ -65,12 +65,12 @@ namespace Project
         }
 
         //add recipe to meal
-        public int AddToMeal(string value, string ddt)
+        public int AddToMeal(string value, string ddt, int id)
         {
             try
             {
                 RecipeD objS = new RecipeD();
-                return objS.Add(value, ddt);
+                return objS.Add(value, ddt, id);
             }
             catch
             {
