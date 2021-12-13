@@ -40,11 +40,9 @@ namespace Project
                 connection.Open();
 
             //Create papameters for the query
-            MySqlCommand insertRecipeINGR = new MySqlCommand("INSERT INTO recipe_ingr (recipe_id, amount, unitType, ref_ingr_id) VALUES ((SELECT MAX(recipe.id) FROM recipe),(@Amount),(@UnitName), (SELECT id FROM foodstuff WHERE name = @Ingredient));", connection);
+            MySqlCommand insertRecipeINGR = new MySqlCommand("INSERT INTO recipe_ingr (recipe_id, amount, unitType, ref_ingr_id) VALUES ((SELECT MAX(recipe.id) FROM recipe),(@Amount),(@UnitName), (SELECT id FROM foodstuff WHERE name = @Ingredient))", connection);
             MySqlCommand testINGR = new MySqlCommand("SELECT EXISTS (SELECT name FROM foodstuff WHERE name = (@Ingredient)", connection);
             MySqlCommand insertINGR = new MySqlCommand("INSERT INTO foodstuff (name) values (@Ingredient)", connection);
-            MySqlCommand selectStorageAmount = new MySqlCommand("SELECT baseUNIT FROM foodstuff WHERE name = @Ingredient", connection);
-            MySqlCommand buyINGR = new MySqlCommand("INSERT INTO shoppingList (items) VALUES (@Ingredient)", connection);
           
           
             //There needs to be a parameter, before it can be given a value
@@ -53,11 +51,9 @@ namespace Project
             insertRecipeINGR.Parameters.Add("@Amount", MySqlDbType.Int32);
             insertRecipeINGR.Parameters.Add("@UnitName", MySqlDbType.String);
             insertRecipeINGR.Parameters.Add("@Ingredient", MySqlDbType.String);
-            selectStorageAmount.Parameters.Add("@Ingredient", MySqlDbType.String);
-            buyINGR.Parameters.Add("@Ingredient", MySqlDbType.String);
+
           try
             {
-                StringBuilder str = new StringBuilder();
                 //check that datagrid values are not null and delete one row since its always empty
                 for (int i = 0; i <= GridIngredients.Count - 1 && GridIngredients[i] != null; i++ )
                 {
@@ -67,15 +63,7 @@ namespace Project
                     insertRecipeINGR.Parameters["@Ingredient"].Value = GridIngredients[i].Ingredient.ToString();
                     insertRecipeINGR.Parameters["@Amount"].Value = Convert.ToInt32(GridIngredients[i].Amount);
                     insertRecipeINGR.Parameters["@UnitName"].Value = GridIngredients[i].UnitName.ToString();
-                    selectStorageAmount.Parameters["@Ingredient"].Value = GridIngredients[i].Ingredient.ToString();
 
-                    int storageAmount = selectStorageAmount.ExecuteNonQuery();
-                    int neededAmount = GridIngredients[i].Amount;
-
-                    if (neededAmount > storageAmount)
-                    {
-                        str.Append(GridIngredients[i].Ingredient.ToString() + ", ");
-                    }
                     if (testINGR.ExecuteNonQuery() == 0)
                     {
                         insertINGR.ExecuteNonQuery();
@@ -84,10 +72,6 @@ namespace Project
                     insertRecipeINGR.ExecuteNonQuery();
                 }
 
-                str.ToString().TrimEnd(',');
-                buyINGR.Parameters["@Ingredient"].Value = str;
-                buyINGR.ExecuteNonQuery();
-                }
                 //this worked
                 return 1;
             }
