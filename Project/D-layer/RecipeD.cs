@@ -103,7 +103,7 @@ namespace Project
             if (ConnectionState.Closed == connection.State)
                 connection.Open();
 
-            MySqlCommand shoplist = new MySqlCommand("SELECT recipe_ingr.amount, recipe_ingr.unitType, foodstuff.name FROM recipe INNER JOIN recipe_ingr ON recipe.id = recipe_ingr.recipe_id INNER JOIN foodstuff ON recipe_ingr.ref_ingr_id = foodstuff.id WHERE recipe.id = '" + id + "'", connection);
+            MySqlCommand shoplist = new MySqlCommand("SELECT recipe_ingr.amount, recipe_ingr.unitType, foodstuff.name FROM recipe INNER JOIN recipe_ingr ON recipe.id = recipe_ingr.recipe_id INNER JOIN foodstuff ON recipe_ingr.ref_ingr_id = foodstuff.id WHERE recipe.id = '"+id+"'", connection);
             MySqlCommand cmd = new MySqlCommand("insert into meal (name, productionDate) values ('"+value+"','"+ddt+"')", connection);
             MySqlCommand selectStorageAmount = new MySqlCommand("SELECT baseUNIT FROM foodstuff WHERE name = @Ingredient", connection);
             MySqlCommand buyINGR = new MySqlCommand("INSERT INTO shoppingList (items) VALUES (@Ingredient)", connection);
@@ -132,7 +132,7 @@ namespace Project
                     selectStorageAmount.Parameters["@Ingredient"].Value = ingredientsList[i].Ingredient.ToString();
 
                     int storageAmount = selectStorageAmount.ExecuteNonQuery();
-                    int neededAmount = ingredientsList[i].Amount;
+                    int neededAmount = Convert.ToInt32(ingredientsList[i].Amount);
 
                     if (neededAmount > storageAmount)
                     {

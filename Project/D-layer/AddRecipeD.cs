@@ -41,7 +41,7 @@ namespace Project
 
             //Create papameters for the query
             MySqlCommand insertRecipeINGR = new MySqlCommand("INSERT INTO recipe_ingr (recipe_id, amount, unitType, ref_ingr_id) VALUES ((SELECT MAX(recipe.id) FROM recipe),(@Amount),(@UnitName), (SELECT id FROM foodstuff WHERE name = @Ingredient))", connection);
-            MySqlCommand testINGR = new MySqlCommand("SELECT EXISTS (SELECT name FROM foodstuff WHERE name = (@Ingredient)", connection);
+            MySqlCommand testINGR = new MySqlCommand("SELECT EXISTS (SELECT name FROM foodstuff WHERE name = (@Ingredient))", connection);
             MySqlCommand insertINGR = new MySqlCommand("INSERT INTO foodstuff (name) values (@Ingredient)", connection);
           
           

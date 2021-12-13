@@ -61,7 +61,6 @@
     <Compile Include="B-layer\MealsB.cs" />
     <Compile Include="B-layer\StorageB.cs" />
     <Compile Include="D-layer\AddRecipeD.cs" />
-    <Compile Include="D-layer\ShoppingListD.cs" />
     <Compile Include="D-layer\StorageD.cs" />
     <Compile Include="D-layer\IngredientsListItem.cs" />
     <Compile Include="D-layer\MealsD.cs" />
@@ -141,6 +140,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
