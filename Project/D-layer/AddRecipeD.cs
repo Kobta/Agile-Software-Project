@@ -64,7 +64,8 @@ namespace Project
                     insertRecipeINGR.Parameters["@Amount"].Value = Convert.ToInt32(GridIngredients[i].Amount);
                     insertRecipeINGR.Parameters["@UnitName"].Value = GridIngredients[i].UnitName.ToString();
 
-                    if (testINGR.ExecuteNonQuery() == 0)
+                    int r = Convert.ToInt32(testINGR.ExecuteScalar());
+                    if (r == 0)
                     {
                         insertINGR.ExecuteNonQuery();
                     }
