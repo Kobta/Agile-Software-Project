@@ -96,7 +96,7 @@ namespace Project
             }
         }
 
-        //insert recipe into meal
+        //insert recipe into meal and make a shoppinglist
         public int Add(string value, string ddt, int id)
         {
             connection.ConnectionString = ConSt;
@@ -105,7 +105,7 @@ namespace Project
 
             MySqlCommand shoplist = new MySqlCommand("SELECT recipe_ingr.amount, recipe_ingr.unitType, foodstuff.name FROM recipe INNER JOIN recipe_ingr ON recipe.id = recipe_ingr.recipe_id INNER JOIN foodstuff ON recipe_ingr.ref_ingr_id = foodstuff.id WHERE recipe.id = '" + id + "'", connection);
             MySqlCommand cmd = new MySqlCommand("insert into meal (name, productionDate) values ('"+value+"','"+ddt+"')", connection);
-            MySqlCommand selectStorageAmount = new MySqlCommand("SELECT baseUNIT FROM foodstuff WHERE name = @Ingredient", connection);
+            MySqlCommand selectStorageAmount = new MySqlCommand("SELECT baseUnit FROM foodstuff WHERE name = @Ingredient", connection);
             MySqlCommand insertShoppingList = new MySqlCommand("INSERT INTO shoppingList (items) VALUES (@Ingredient)", connection);
             MySqlCommand buyINGR = new MySqlCommand("UPDATE foodstuff SET baseUnit = @Amount WHERE name = @Ingredient", connection);
 
@@ -130,29 +130,53 @@ namespace Project
                 ingredientsList = list.ToArray();
                 rd1.Close();
 
-                for (int i = 0; ingredientsList[i] != null && i < ingredientsList.Length - 1; i++)
+                int storageAmount = 0;
+                int num = Convert.ToInt32(ingredientsList.Length);
+
+                for (int i = 0; i < ingredientsList.Length; i++)
                 {
                     buyINGR.Parameters["@Ingredient"].Value = ingredientsList[i].Ingredient.ToString();
                     selectStorageAmount.Parameters["@Ingredient"].Value = ingredientsList[i].Ingredient.ToString();
 
-                    int storageAmount = selectStorageAmount.ExecuteNonQuery();
-                    int neededAmount = ingredientsList[i].Amount;
+                    MySqlDataReader rd2 = selectStorageAmount.ExecuteReader();
+
+                    
+
+                    while (rd2.Read())
+                    {
+                        storageAmount = rd2.GetInt32(0);
+                    }
+                    rd2.Close();
+
+                    int neededAmount = Convert.ToInt32(ingredientsList[i].Amount);
                     int addedAmount;
 
                     if (neededAmount > storageAmount)
                     {
-                        addedAmount = neededAmount * 2 + storageAmount;
+                        addedAmount = (neededAmount * 2) + storageAmount;
+                        addedAmount -= neededAmount;
                         buyINGR.Parameters["@Amount"].Value = addedAmount;
                         str.Append(ingredientsList[i].Ingredient.ToString() + ", ");
                         buyINGR.ExecuteNonQuery();
                     }
-                    buyINGR.Parameters["@Amount"].Value = storageAmount - neededAmount;
-                    buyINGR.ExecuteNonQuery();
+                    else
+                    {
+                        int newvalue = storageAmount - neededAmount;
+                        buyINGR.Parameters["@Amount"].Value = newvalue;
+                        buyINGR.ExecuteNonQuery();
+                    }
+                    
 
                 }
 
-                insertShoppingList.Parameters["@Ingredient"].Value = str;
-                insertShoppingList.ExecuteNonQuery();
+                if (str.Length != 0)
+                {
+                    str.Length--;
+                    str.Length--;
+                    insertShoppingList.Parameters["@Ingredient"].Value = str;
+                    insertShoppingList.ExecuteNonQuery();
+                }
+                
 
                 cmd.ExecuteNonQuery();
                 return 1;
